@@ -1,0 +1,8 @@
+.App-input {
+    color: red;
+}
+
+input::placeholder {
+    color: blue;
+    font-style: italic;
+}
