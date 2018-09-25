@@ -1,0 +1,34 @@
+.search {
+  width: 100%;
+  max-width: 670px;
+}
+
+.header-search-form {
+  display: flex;
+  align-items: center;
+}
+
+.header-search-input {
+  width: 100%;
+  height: 28px;
+  font-size: 15px;
+  font-weight: 300;
+  padding-left: 10px;
+  padding-bottom: 3px;
+}
+
+.search-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 34px;
+  border: solid 1px rgb(211, 211, 211);
+  border-left: 0px;
+  background-color: rgb(248, 248, 248);
+}
+
+.fa-search {
+  font-size: 14px;
+  color: rgb(131, 126, 126);
+}

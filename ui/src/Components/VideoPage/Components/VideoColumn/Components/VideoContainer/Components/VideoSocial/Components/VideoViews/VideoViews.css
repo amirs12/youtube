@@ -1,0 +1,10 @@
+.video-views {
+  display: flex;
+  align-items: center;
+}
+
+.views {
+    color: hsla(0, 0%, 6.7%, 0.6);
+    font-size: 1.05em;
+    letter-spacing: 0.00000001px;
+}

@@ -1,0 +1,11 @@
+.author-subscribe {
+  height: 16px;
+  padding: 10px 16px;
+  align-self: center;
+  color: rgb(255, 255, 255);
+  font-family: Roboto, Noto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.007000000216066837px;
+  background-color: rgb(255, 0, 0);
+}

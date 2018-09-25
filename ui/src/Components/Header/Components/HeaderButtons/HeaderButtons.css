@@ -1,0 +1,18 @@
+.header-buttons {
+  width: 100%;
+  max-width: 256px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.upload-icon {
+  margin-top: 4px;
+  height: 18px;
+}
+
+.youtube-apps {
+  height: 15px;
+  color: #9fa2a3;
+}

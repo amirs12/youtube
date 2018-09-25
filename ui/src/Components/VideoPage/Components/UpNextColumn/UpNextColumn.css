@@ -1,0 +1,5 @@
+.up-next-column {
+  min-width: 402px;
+  display: flex;
+  flex-direction: column;
+}

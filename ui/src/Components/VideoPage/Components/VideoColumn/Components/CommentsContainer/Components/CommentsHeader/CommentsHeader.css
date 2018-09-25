@@ -1,0 +1,13 @@
+.comments-header {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+  .sort-by {
+    font-size: 13px;
+    font-weight: 400;
+    padding-top: 4px;
+    color: rgba(17, 17, 17, 0.6);
+  }
