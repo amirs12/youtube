@@ -10,7 +10,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "react": "cd ui && npm run build",
-    "start": "npm run react"
+    "preserver": "cd servers && npm i",
+    "server": "cd servers && node server.js",
+    "start": "npm run react && npm run server"
   },
   "repository": {
     "type": "git",
