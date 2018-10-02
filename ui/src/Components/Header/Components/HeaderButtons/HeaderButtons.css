@@ -1,18 +1,36 @@
 .header-buttons {
   width: 100%;
-  max-width: 256px;
+  max-width: 252px;
   min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.upload-icon {
-  margin-top: 4px;
-  height: 18px;
+.fa-video {
+  color: #9fa2a3;
 }
 
 .youtube-apps {
-  height: 15px;
+  height: 16px;
   color: #9fa2a3;
+}
+
+.fa-facebook-messenger {
+  color: #9fa2a3;
+  font-size: 21px;
+  margin-left: 3px;
+}
+
+.fa-bell {
+  color: #9fa2a3;
+  font-size: 19px;
+  margin-left: 3px;
+}
+
+.user-header-avatar {
+  border-radius: 50%;
+  height: 32px;
+  margin-right: 30px;
+  margin-left: 6px;
 }

@@ -6,7 +6,8 @@ class ViewReplies extends Component {
     render() {
       return (
         <div className="view-replies">
-          View 40 replies
+          View 40 replies 
+          <i class="fas fa-chevron-down"></i>
         </div>
       );
     }

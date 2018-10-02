@@ -8,9 +8,9 @@ class CommentLikes extends Component {
     render() {
       return (
         <div className="comment-likes">
-          <div className="comment-like-icon"></div>
+          <i class="fas fa-thumbs-up"></i>
           <LikeCounter />
-          <div className="comment-unlike-icon"></div>
+          <i class="fas fa-thumbs-down"></i>
           <CommentReply />
         </div>
       );
