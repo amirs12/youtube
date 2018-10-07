@@ -3,13 +3,14 @@ import React, { Component } from 'react';
 import './LikeCounter.css';
 
 class LikeCounter extends Component {
-    render() {
-      return (
-        <div className="like-counter">
-           4.4k
-        </div>
-      );
-    }
+  render() {
+    const { value } = this.props
+    return (
+      <div className="like-counter">
+        {value}
+      </div>
+    );
+  }
 };
 
 export default LikeCounter;
