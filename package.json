@@ -12,9 +12,9 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "react": "cd ui && npm run build",
     "server": "cd servers && node server.js",
-    "start": "npm run react && npm run server"
+    "postinstall": "cd ui && npm i && npm run build",
+    "start": "npm run server"
   },
   "repository": {
     "type": "git",
