@@ -7,6 +7,7 @@ class Content extends Component {
     render() {
       return (
         <div className="content">
+          <h1>This will be the content page</h1>
           <CategoryGroup />
         </div>
       );

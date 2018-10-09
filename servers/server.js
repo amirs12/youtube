@@ -11,6 +11,7 @@ server.use("/api/users/", users);
 server.use("/api/posts/", posts);
 
 const distFolder = path.join(__dirname, '../ui/build');
+
 server.use(express.static(distFolder));
 
 server.listen(process.env.PORT || 9090);
