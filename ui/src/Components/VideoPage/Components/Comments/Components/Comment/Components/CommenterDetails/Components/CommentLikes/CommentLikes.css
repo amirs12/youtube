@@ -1,0 +1,15 @@
+.comment-likes {
+  display: flex;
+  color: rgb(136, 136, 136);
+}
+
+.fa-thumbs-up {
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.fa-thumbs-down {
+  font-size: 15px;
+  margin-right: 8px;
+  transform: rotateY(180deg); 
+}

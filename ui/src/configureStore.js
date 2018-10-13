@@ -4,8 +4,9 @@ import { createLogger } from 'redux-logger'
 import rootReducer from './Reducers'
 
 const loggerMiddleware = createLogger()
+const preloadedState = {};
 
-export default function configureStore(preloadedState) {
+export default function configureStore() {
   return createStore(
     rootReducer,
     preloadedState,

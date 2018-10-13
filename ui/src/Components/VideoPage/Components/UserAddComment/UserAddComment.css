@@ -1,0 +1,18 @@
+.user-add-comment {
+  display: flex;
+  align-items: center;
+}
+
+.user-comments-avatar {
+  border-radius: 50%;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.add-comment-box {
+  width: 100%;
+  border: 0px;
+  margin-top: -20px;
+  border-bottom: solid 1px lightgray;
+  font-size: 14px;
+}

@@ -1,83 +1,53 @@
 import { combineReducers } from 'redux'
 import {
   ADD_LIKE,
-  ADD_DISLIKE
+  ADD_DISLIKE,
+  FETCH_COMMENTS,
+  FETCH_USERS
 } from '../Actions/Actions.js'
 
-export function addLike(state = 45000, action) {
+const initialState = {
+  videos: [],
+  like: 500,
+  dislike: 10,
+  comments: [],
+  newcomment: {},
+  users: []
+}
+
+function reduceUsers(state = initialState, action) {
+  switch (action.type) {
+    case FETCH_USERS:
+      return {...state, users: action.users}
+    default:
+      return state
+  }
+}
+
+function reduceComments(state = initialState, action) {
+  switch (action.type) {
+    case FETCH_COMMENTS:
+      return {...state, comments: action.comments}
+    default:
+      return state
+  }
+}
+
+function addLike(state = initialState, action) {
   switch (action.type) {
     case ADD_LIKE:
-      return state + 1
-    default:
-      return state
-  }  
-}
-
-export function addUnlike(state = 0, action) {
-  switch (action.type) {
+      return {...state, like: state.like + 1}
     case ADD_DISLIKE:
-      return state + 1
+      return {...state, dislike: state.dislike + 1}
     default:
       return state
   }  
 }
 
-/*
-function selectedSubreddit(state = 'reactjs', action) {
-  switch (action.type) {
-    case SELECT_SUBREDDIT:
-      return action.subreddit
-    default:
-      return state
-  }
-}
-
-function posts(
-  state = {
-    isFetching: false,
-    didInvalidate: false,
-    items: []
-  },
-  action
-) {
-  switch (action.type) {
-    case INVALIDATE_SUBREDDIT:
-      return Object.assign({}, state, {
-        didInvalidate: true
-      })
-    case REQUEST_POSTS:
-      return Object.assign({}, state, {
-        isFetching: true,
-        didInvalidate: false
-      })
-    case RECEIVE_POSTS:
-      return Object.assign({}, state, {
-        isFetching: false,
-        didInvalidate: false,
-        items: action.posts,
-        lastUpdated: action.receivedAt
-      })
-    default:
-      return state
-  }
-}
-
-function postsBySubreddit(state = {}, action) {
-  switch (action.type) {
-    case INVALIDATE_SUBREDDIT:
-    case RECEIVE_POSTS:
-    case REQUEST_POSTS:
-      return Object.assign({}, state, {
-        [action.subreddit]: posts(state[action.subreddit], action)
-      })
-    default:
-      return state
-  }
-}
-*/
 const rootReducer = combineReducers({
-  ADD_DISLIKE,
-  ADD_LIKE
+  reduceComments, 
+  addLike,
+  reduceUsers
 })
 
 export default rootReducer

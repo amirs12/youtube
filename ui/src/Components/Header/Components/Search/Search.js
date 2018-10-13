@@ -8,7 +8,7 @@ class Search extends Component {
           <form className="header-search-form">
             <input className="header-search-input" placeholder="Search"></input>
             <div className="search-icon-box">
-              <i class="fas fa-search"></i>
+              <i className="fas fa-search"></i>
             </div>
           </form>
         </div>
