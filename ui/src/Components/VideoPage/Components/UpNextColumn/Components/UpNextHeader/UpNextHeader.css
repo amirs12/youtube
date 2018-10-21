@@ -1,0 +1,44 @@
+.up-next-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.up-next {
+  font-size: 16px;
+  color: black;
+}
+
+.autoplay-box {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: -23px;
+  top: 3px;
+}
+
+.autoplay {
+  font-size: 13px;
+  color: rgb(134, 133, 133);
+  font-weight: 500;
+}
+
+.toggle-icon {
+  margin-left: 8px;
+}
+
+.toggle-bar {
+  width: 22px;
+  height: 14px;
+  border-radius: 20px;
+  background-color: #E6E6E6;
+}
+
+.toggle-radio {
+  position: relative;
+  left: 15px;
+  top: -17px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: #185FD4;
+}

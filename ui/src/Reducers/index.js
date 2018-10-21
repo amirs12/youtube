@@ -3,16 +3,65 @@ import {
   ADD_LIKE,
   ADD_DISLIKE,
   FETCH_COMMENTS,
-  FETCH_USERS
+  FETCH_USERS,
+  GET_VIDEOS_RESPONSE,
+  GET_VIDEOS_REQUEST,
+  VIDEO_INFO_REQUEST,
+  VIDEO_INFO_RESPONSE
 } from '../Actions/Actions.js'
 
 const initialState = {
   videos: [],
+  videosLoading: "true",
   like: 500,
   dislike: 10,
   comments: [],
   newcomment: {},
-  users: []
+  users: [],
+  dbVideos: [],
+  categories: [],
+  videoInfo: {},
+  infoLoading: "false"
+}
+
+function videoInfoReducer(state = initialState, action) {
+  switch (action.type) {
+    case VIDEO_INFO_RESPONSE:
+      return {...state, videoInfo: action.videoInfo}
+    default:
+      return state
+  }
+}
+
+function infoLoadingReducer(state = initialState, action) {
+  switch (action.type) {
+    case VIDEO_INFO_REQUEST:
+      return {...state, infoLoading: "true"}
+    case GET_VIDEOS_RESPONSE:
+      return {...state, infoLoading: "false"}
+    default:
+      return state
+  }
+}
+
+function reducedb(state = initialState, action) {
+  switch (action.type) {
+    case GET_VIDEOS_RESPONSE:
+      return {...state, dbVideos: action.dbVideos}
+    default:
+      return state
+  }
+}
+
+function loadingReducer(state = initialState, action) {
+  switch (action.type) {
+    case GET_VIDEOS_REQUEST:
+      return {...state, videosLoading: "true"}
+    case GET_VIDEOS_RESPONSE:
+      return {...state, videosLoading: "false"}
+    default:
+      return state
+  }
 }
 
 function reduceUsers(state = initialState, action) {
@@ -47,7 +96,11 @@ function addLike(state = initialState, action) {
 const rootReducer = combineReducers({
   reduceComments, 
   addLike,
-  reduceUsers
+  reduceUsers,
+  reducedb,
+  loadingReducer,
+  videoInfoReducer,
+  infoLoadingReducer
 })
 
 export default rootReducer

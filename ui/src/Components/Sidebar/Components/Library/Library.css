@@ -1,0 +1,54 @@
+.library-box {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  border-bottom: solid 1px rgb(231, 230, 230);
+}
+
+.library {
+  font-size: 13px;
+  padding: 8px 0px 8px 24px;
+  color: gray;
+}
+  
+.history-box, .later-box, .playlist-box, .israeli-box {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.history, .later, .playlist, .israeli, .show-more-text {
+  font-size: 14px;
+}
+
+.fa-clock {
+  color: gray;
+  padding-left: 3px;
+  font-size: 17px;
+  margin-right: 28px;
+}
+
+.fa-bars {
+  color: gray;
+  padding-left: 3px;
+  font-size: 17px;
+  margin-right: 31px;
+}
+
+.show-more-box {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-right: 24px;
+  padding-left: 22px;
+}
+
+.fa-chevron-down {
+  color: gray;
+  font-size: 16px;
+  margin-right: 30px;
+}

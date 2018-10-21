@@ -1,0 +1,31 @@
+.next-video-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 402px;
+  height: 94px;
+  margin-bottom: 8px;
+}
+
+.next-thumbnail-img {
+  width: 168px;
+  height: 94px;
+}
+
+.next-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.next-name {
+  font-size: 14px;
+  font-weight: 900px;
+  margin-bottom: 5px;
+}
+
+.next-authour, .next-views {
+  color: #999797;
+  font-size: 13px;
+  margin-bottom: 3px;
+  font-weight: 400px;
+}

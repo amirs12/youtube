@@ -1,0 +1,22 @@
+.group-video {
+  display: flex;
+  flex-direction: column;
+  padding-right: 4px;
+}
+
+.group-video-img {
+  width: 210px;
+  height: 118px;
+}
+
+.group-video-title {
+  font-size: 14px;
+  margin: 8px 0px;
+}
+
+.channel-name, .views-and-date {
+  font-size: 13px;
+  color: rgb(136, 135, 135);
+  margin-top: 0px;
+  margin-bottom: 4px;
+}

@@ -1,0 +1,51 @@
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  border-bottom: solid 1px rgb(231, 230, 230);
+}
+
+.sidebar-home-box {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-right: 24px;
+  padding-left: 24px;
+  background-color: rgb(214, 214, 214);
+}
+
+.fa-home {
+  color: #E93F36;
+  padding-left: 2px;
+  font-size: 18px;
+  margin-right: 26px;
+}
+
+.sidebar-home, .sidebar-trending, .sidebar-subscript {
+  font-size: 14px;
+}
+
+.sidebar-trending-box, .sidebar-subscript-box {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.fa-fire {
+  color: gray;
+  padding-left: 5px;
+  font-size: 18px;
+  margin-right: 29px;
+}
+
+.fa-youtube {
+  color: gray;
+  padding-left: 4px;
+  padding-top: 3px;
+  font-size: 16px;
+  margin-right: 26px;
+}
