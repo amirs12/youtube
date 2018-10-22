@@ -15,7 +15,6 @@
     overflow: hidden;
 }
 
-  .menu-container {
-    display: flex;
-    justify-content: flex-start;
-  }
+.menu-container {
+  display: flex;
+}

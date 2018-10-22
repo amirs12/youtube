@@ -1,6 +1,7 @@
 .search {
   width: 100%;
   max-width: 640px;
+  padding-left: 10px;
 }
 
 .header-search-form {

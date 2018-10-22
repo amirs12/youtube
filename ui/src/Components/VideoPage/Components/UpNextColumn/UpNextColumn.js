@@ -6,17 +6,17 @@ import UpNextVideos from './Components/UpNextVideos/UpNextVideos.js';
 import './UpNextColumn.css';
 
 class UpNextColumn extends Component {
-    render() {
-      return (
-        <div className="up-next-column">
-          <UpNextHeader />
-          <div className="first-next-wrapper">
-            <NextVideoContainer />
-          </div>
-          <UpNextVideos />
+  render() {
+    return (
+      <div className="up-next-column">
+        <UpNextHeader />
+        <div className="first-next-wrapper">
+          <NextVideoContainer />
         </div>
-      );
-    }
+        <UpNextVideos />
+      </div>
+    );
+  }
 };
 
 export default UpNextColumn;

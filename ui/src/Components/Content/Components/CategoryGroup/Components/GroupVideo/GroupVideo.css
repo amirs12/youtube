@@ -3,6 +3,8 @@
   flex-direction: column;
   padding-right: 4px;
 }
+/* flex-wrap: wrap;
+*/
 
 .group-video-img {
   width: 210px;

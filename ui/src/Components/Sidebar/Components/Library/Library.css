@@ -3,14 +3,14 @@
   flex-direction: column;
   width: 240px;
   padding-top: 8px;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
   border-bottom: solid 1px rgb(231, 230, 230);
 }
 
 .library {
   font-size: 13px;
   padding: 8px 0px 8px 24px;
-  color: gray;
+  color: rgb(107, 107, 107);
 }
   
 .history-box, .later-box, .playlist-box, .israeli-box {

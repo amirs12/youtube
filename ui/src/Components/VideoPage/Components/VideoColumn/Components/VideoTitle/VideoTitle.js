@@ -4,9 +4,9 @@ import './VideoTitle.css';
 
 class VideoTitle extends Component {
     render() {
-      const { dbVideos } = this.props
+      const { dbVideo } = this.props
       return (
-        <p className="video-title">{dbVideos[0].videos[0].videoName}</p>
+        <p className="video-title">{dbVideo.videoName}</p>
       );
     }
 };

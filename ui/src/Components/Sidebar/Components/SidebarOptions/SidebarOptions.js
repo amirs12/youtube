@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
-import './SidebarOptions.css';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
+import './SidebarOptions.css'
 
 class SidebarOptions extends Component {
     render() {
       return (
         <div className="sidebar-options">
           <div className="sidebar-home-box">
-            <i className="fas fa-home"></i>
+            <Link to="/">
+              <i className="fas fa-home"></i>
+            </Link>
             <div className="sidebar-home">Home</div>
           </div>
           <div className="sidebar-trending-box">

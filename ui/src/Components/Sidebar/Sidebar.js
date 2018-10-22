@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import SidebarOptions from './Components/SidebarOptions/SidebarOptions.js';
 import Library from './Components/Library/Library.js';
-import About from './Components/About/About.js';
+import Subscriptions from './Components/Subscriptions/Subscriptions.js';
+import MoreYoutube from './Components/MoreYoutube/MoreYoutube.js';
 
 import './Sidebar.css';
 
@@ -11,7 +12,8 @@ class Sidebar extends Component {
       <div className="sidebar">
         <SidebarOptions />
         <Library />
-        <About />
+        <Subscriptions />
+        <MoreYoutube />
       </div>
     );
   }

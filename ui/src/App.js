@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Components/Header/Header.js';
 import Content from './Components/Content/Content.js';
-//import Sidebar from './Components/Sidebar/Sidebar.js';
 import VideoPage from './Components/VideoPage/VideoPage.js';
 import { 
   BrowserRouter as Router,
@@ -17,16 +16,20 @@ class App extends Component {
       <Router>
         <div className="app">
           <Header />
-          <Link to="/">VideoPage</Link>
-          <Link to="/content">Content</Link>
 
-          <Route exact path="/" component={VideoPage} />
-          <Route path="/content" component={Content} />
+          <Route exact path="/" component={Content} />
+          <Route path="/video/:id" component={Child} />
         </div>
       </Router>
     );
   }
 };
+
+const Child = ({ match }) => (
+  <div>
+    <VideoPage paramsId={match.params.id}/>
+  </div>
+);
 
 
 export default App;

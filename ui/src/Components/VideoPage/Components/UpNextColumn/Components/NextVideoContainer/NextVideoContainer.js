@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import './NextVideoContainer.css';
 
@@ -16,5 +17,6 @@ class NextVideoContainer extends Component {
     )
   }
 }
+
 
 export default NextVideoContainer

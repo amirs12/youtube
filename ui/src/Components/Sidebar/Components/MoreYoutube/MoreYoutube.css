@@ -1,0 +1,52 @@
+.more-youtube-box {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px rgb(231, 230, 230);
+}
+
+.more-youtube {
+  font-size: 13px;
+  padding: 8px 0px 8px 24px;
+  color: rgb(107, 107, 107);
+}
+  
+.more-gaming-box, .live-box {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.more-gaming, .live {
+  font-size: 14px;
+}
+
+.dice-icon {
+  color: gray;
+  padding-left: 2px;
+  font-size: 15px;
+  margin-right: 27px;
+}
+
+.wifi-left {
+  position: relative;
+  left: -35px;
+  color: gray;
+  padding-left: 3px;
+  font-size: 13px;
+  margin-right: -4px;
+  transform: rotate(-90deg);
+}
+
+.wifi-right {
+  position: relative;
+  top: -10px;
+  color: gray;
+  padding-left: 16px;
+  font-size: 13px;
+  transform: rotate(90deg); 
+}

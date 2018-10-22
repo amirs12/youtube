@@ -16,13 +16,13 @@ import './VideoColumn.css';
 
 class VideoColumn extends Component {
   render() {
-    const { dbVideos } = this.props
+    const { dbVideo } = this.props
 
     return (
       <div className="video-column">
         <div className="video-container">
-          <VideoPlayer dbVideos={dbVideos}/>
-          <VideoTitle dbVideos={dbVideos}/>
+          <VideoPlayer dbVideo={dbVideo}/>
+          <VideoTitle dbVideo={dbVideo}/>
           <div className="video-social">
             <VideoViews />
             <div className="social-icons">

@@ -1,0 +1,64 @@
+.subscriptions-box {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px rgb(231, 230, 230);
+}
+
+.subscriptions {
+  font-size: 13px;
+  padding: 8px 0px 8px 24px;
+  color: rgb(107, 107, 107);
+}
+
+.popular-box, .music-box, .sports-box, .gaming-box {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.popular, .music, .sports, .gaming {
+  font-size: 14px;
+}
+
+.popular-wrapper, .music-wrapper, .sports-wrapper, .gaming-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: rgb(73, 73, 73);
+  margin-right: 24px;
+}
+
+.fa-tint {
+  color: rgb(243, 243, 243);
+  font-size: 16px;
+  transform: rotate(40deg); 
+  padding-left: 1px;
+  padding-bottom: 2px;
+}
+
+.fa-itunes-note {
+  color: rgb(243, 243, 243);
+  font-size: 14px;
+  padding-top: 1px;
+  padding-right: 1px;
+}
+
+.fa-futbol {
+  color: rgb(243, 243, 243);
+  font-size: 14px;
+}
+
+.fa-dice {
+  color: rgb(243, 243, 243);
+  font-size: 11px;
+  transform: rotate(-27deg); 
+  padding-bottom: 3px;
+}

@@ -15,10 +15,15 @@ class VideoPage extends Component {
     if(this.props.videosLoading === "true") {
       return <div>Loading...</div>
     }
+
+    const video = this.props.dbVideos[0].videos[this.props.paramsId];
+    if (!video) {
+      return <div>Video not found</div>;
+    }
     
     return (
       <div className="video-page">
-        <VideoColumn dbVideos={this.props.dbVideos}/>
+        <VideoColumn dbVideo={video}/>
         <UpNextColumn dbVideos={this.props.dbVideos}/>
       </div>
     );

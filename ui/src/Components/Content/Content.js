@@ -21,7 +21,7 @@ class Content extends Component {
         <Sidebar />
         <div className="groups-container">
           <div>
-            <CategoryGroup dbVideos={this.props.dbVideos} groupCategory="YouTube Mixes" groupType="Nonstop playlists based on a song or artis"/>
+            <CategoryGroup dbVideos={this.props.dbVideos} groupCategory="YouTube Mixes" groupType="Nonstop playlists based on a song or artist"/>
             <CategoryGroup dbVideos={this.props.dbVideos} groupCategory="Recomended" groupType=""/>
             <CategoryGroup dbVideos={this.props.dbVideos} groupCategory="Rock Music - Topic" groupType="Recomended videos for you"/>
             <CategoryGroup dbVideos={this.props.dbVideos} groupCategory="90's Rock - Topic" groupType="Recomended videos for you"/>
