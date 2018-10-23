@@ -10,17 +10,18 @@ class Comments extends Component {
     this.props.fetchComments()
     this.props.fetchUsers()
   }
-  
-  /*hibur(x, y) {
-    return x + y
-  }*/
-
+ 
   render() {
+    if(this.props.commentsLoading === "true" || this.props.usersLoading === "true") {
+      return <div>Loading...</div>
+    }
+
     const usersItems = this.props.users.map(userItem => (
         <div key={this.props.comments[userItem.id].id} className="comments">
           <Comment body={this.props.comments[userItem.id].body} 
-//                   commenterName={this.props.dbVideos[2].videos[0].comments[0].commenterName} 
-//                   name={this.props.dbVideos[2].videos[0].comments[0].commentDate}
+                   commenterName={userItem.name} 
+                   commentDate={userItem.id}
+                   commenterAvatar={this.props.dbVideos[0].avatars[userItem.id]}
           />
         </div>
     ))
@@ -35,8 +36,9 @@ class Comments extends Component {
 const mapStateToProps = state => ({
   comments: state.reduceComments.comments,
   users: state.reduceUsers.users,
- // dbVideos: state.reducedb.dbVideos,
- // videosLoading: state.loadingReducer.videosLoading
+  dbVideos: state.reducedb.dbVideos,
+  usersLoading: state.usersReducer.usersLoading,
+  commentsLoading: state.commentsReducer.commentsLoading
 })
 
 export default connect(mapStateToProps, { fetchComments , fetchUsers })(Comments)

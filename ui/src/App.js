@@ -4,8 +4,7 @@ import Content from './Components/Content/Content.js';
 import VideoPage from './Components/VideoPage/VideoPage.js';
 import { 
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
  } from 'react-router-dom'
 
 import './App.css';

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import GroupVideo from './Components/GroupVideo/GroupVideo.js'
-import { getVideoInfo } from '../../../../Actions/Actions.js'
 
 import './CategoryGroup.css'
 
@@ -12,8 +11,8 @@ class CategoryGroup extends Component {
 
     const videosGroup = dbVideos[0].videos.filter(videoObject => (videoObject.videoCategory === groupCategory))
     const mapVideos = videosGroup.map(videoItem => (
-      <div key={videoItem.videoId} className="group-videos">
-        <Link to={`/video/${videoItem.videoId}`}>
+      <div key={videoItem.videoId}>
+        <Link to={`/video/${videoItem.videoId}`} className="category-video">
           <GroupVideo dbVideo={videoItem}/>
         </Link>     
       </div>
@@ -32,10 +31,9 @@ class CategoryGroup extends Component {
     );
   }
 };
-
+//
 const mapStateToProps = state => ({
-  videoInfo: state.videoInfoReducer.videoInfo,
-  infoLoading: state.infoLoadingReducer.infoLoading
-})
 
-export default connect(mapStateToProps, { getVideoInfo })(CategoryGroup)
+})
+//
+export default connect(mapStateToProps, {})(CategoryGroup)

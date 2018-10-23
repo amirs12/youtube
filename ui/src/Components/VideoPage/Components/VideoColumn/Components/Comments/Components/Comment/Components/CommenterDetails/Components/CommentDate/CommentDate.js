@@ -4,10 +4,10 @@ import './CommentDate.css';
 
 class CommentDate extends Component {
     render() {
-      const { name } = this.props
+      const { commentDate } = this.props
 
       return (
-        <div className="comment-date">{name}</div>
+        <div className="comment-date">{commentDate} months ago</div>
       );
     }
 };

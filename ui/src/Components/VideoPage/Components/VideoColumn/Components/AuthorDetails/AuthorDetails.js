@@ -4,10 +4,12 @@ import './AuthorDetails.css';
 
 class AuthorDetails extends Component {
     render() {
+      const { dbVideo } = this.props
+
       return (
         <div className="author-details">
-          <p className="author-name">Movie Music Club</p>
-          <p className="published">Published on Dec 1, 2017</p>
+          <p className="author-name">{dbVideo.authorName}</p>
+          <p className="published">{dbVideo.published}</p>
         </div>
       );
     }

@@ -7,8 +7,8 @@ export const GET_VIDEOS_REQUEST = 'GET_VIDEOS_REQUEST'
 export const GET_VIDEOS_RESPONSE = 'GET_VIDEOS_RESPONSE'
 export const VIDEO_INFO_REQUEST = 'VIDEO_INFO_REQUEST'
 export const VIDEO_INFO_RESPONSE = 'VIDEO_INFO_RESPONSE'
-
-let fetchVideoInfo = require('youtube-info')
+export const REQUEST_COMMENTS = 'REQUEST_COMMENTS'
+export const REQUEST_USERS = 'REQUEST_USERS'
 
 export const addDisLike = () => dispatch => {
   dispatch({
@@ -23,6 +23,7 @@ export const addALike = () => dispatch => {
 }
 
 export const fetchComments = () => dispatch => {
+  dispatch({type: REQUEST_COMMENTS})
   fetch('https://jsonplaceholder.typicode.com/posts')
     .then(res => res.json())
     .then(comments => 
@@ -34,6 +35,7 @@ export const fetchComments = () => dispatch => {
 }
 
 export const fetchUsers = () => dispatch => {
+  dispatch({type: REQUEST_USERS})
   fetch('https://jsonplaceholder.typicode.com/users')
     .then(res => res.json())
     .then(users => 
@@ -55,20 +57,3 @@ export const fetchdb = () => dispatch => {
       })
     )
 }
-
-export const getVideoInfo = () => dispatch => {
-  //const videoId = "GJm7H9IP5SU"
-  dispatch({type: VIDEO_INFO_REQUEST})
-  fetchVideoInfo('GJm7H9IP5SU')
-    .then(res => res.json())
-    .then(videoInfo =>
-      dispatch({
-        type: VIDEO_INFO_RESPONSE,
-        videoInfo
-      }) )
-}
-
-
-/*export const addComment = () => dispatch => {
-  
-}*/

@@ -6,8 +6,8 @@ import {
   FETCH_USERS,
   GET_VIDEOS_RESPONSE,
   GET_VIDEOS_REQUEST,
-  VIDEO_INFO_REQUEST,
-  VIDEO_INFO_RESPONSE
+  REQUEST_COMMENTS,
+  REQUEST_USERS
 } from '../Actions/Actions.js'
 
 const initialState = {
@@ -16,32 +16,10 @@ const initialState = {
   like: 500,
   dislike: 10,
   comments: [],
-  newcomment: {},
   users: [],
   dbVideos: [],
-  categories: [],
-  videoInfo: {},
-  infoLoading: "false"
-}
-
-function videoInfoReducer(state = initialState, action) {
-  switch (action.type) {
-    case VIDEO_INFO_RESPONSE:
-      return {...state, videoInfo: action.videoInfo}
-    default:
-      return state
-  }
-}
-
-function infoLoadingReducer(state = initialState, action) {
-  switch (action.type) {
-    case VIDEO_INFO_REQUEST:
-      return {...state, infoLoading: "true"}
-    case GET_VIDEOS_RESPONSE:
-      return {...state, infoLoading: "false"}
-    default:
-      return state
-  }
+  usersLoading: "true",
+  commentsLoading: "true"
 }
 
 function reducedb(state = initialState, action) {
@@ -73,10 +51,32 @@ function reduceUsers(state = initialState, action) {
   }
 }
 
+function usersReducer(state = initialState, action) {
+  switch (action.type) {
+    case REQUEST_USERS:
+      return {...state, usersLoading: "true"}
+    case FETCH_USERS:
+      return {...state, usersLoading: "false"}
+    default:
+      return state
+  }
+}
+
 function reduceComments(state = initialState, action) {
   switch (action.type) {
     case FETCH_COMMENTS:
       return {...state, comments: action.comments}
+    default:
+      return state
+  }
+}
+
+function commentsReducer(state = initialState, action) {
+  switch (action.type) {
+    case REQUEST_COMMENTS:
+      return {...state, commentsLoading: "true"}
+    case FETCH_COMMENTS:
+      return {...state, commentsLoading: "false"}
     default:
       return state
   }
@@ -99,8 +99,8 @@ const rootReducer = combineReducers({
   reduceUsers,
   reducedb,
   loadingReducer,
-  videoInfoReducer,
-  infoLoadingReducer
+  commentsReducer,
+  usersReducer
 })
 
 export default rootReducer

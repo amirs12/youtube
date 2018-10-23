@@ -4,9 +4,11 @@ import './AuthorAvatar.css';
 
 class AuthorAvatar extends Component {
     render() {
+      const { dbVideo } = this.props
+
       return (
         <div className="author-avatar">
-          <img className="author-img" alt="Movie Music Club" src="https://yt3.ggpht.com/-jFOQVOn4cAM/AAAAAAAAAAI/AAAAAAAAAAA/tzf9uBj-Txg/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg"/>
+          <img className="author-img" alt="Movie Music Club" src={dbVideo.authorAvatar}/>
         </div>
       );
     }

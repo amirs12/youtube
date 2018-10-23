@@ -8,8 +8,6 @@ import AuthorSubscribe from './Components/AuthorSubscribe/AuthorSubscribe.js';
 import RelatedLinks from './Components/RelatedLinks/RelatedLinks.js';
 import CommentsCounter from './Components/CommentsCounter/CommentsCounter.js';
 import UserAddComment from './Components/UserAddComment/UserAddComment.js';
-import CommenterAvatarHard from './Components/CommenterAvatarHard/CommenterAvatarHard.js';
-import CommenterDetailsHard from './Components/CommenterDetailsHard/CommenterDetailsHard.js';
 import Comments from './Components/Comments/Comments'
 
 import './VideoColumn.css';
@@ -31,8 +29,8 @@ class VideoColumn extends Component {
         </div>
         <div className="video-author">
           <div className="author-box">
-            <AuthorAvatar />
-            <AuthorDetails />
+            <AuthorAvatar dbVideo={dbVideo}/>
+            <AuthorDetails dbVideo={dbVideo}/>
           </div>
           <AuthorSubscribe />
         </div>
@@ -43,13 +41,7 @@ class VideoColumn extends Component {
             <div className="sort-by">SORT BY</div>
           </div>
           <UserAddComment />
-          <div className="comment-hard">
-            <CommenterAvatarHard />
-            <div className="comment-details-container">
-              <CommenterDetailsHard />
-            </div>
-          </div>
-          <Comments />
+          <Comments dbVideo={dbVideo}/>
         </div>
       </div>
     );

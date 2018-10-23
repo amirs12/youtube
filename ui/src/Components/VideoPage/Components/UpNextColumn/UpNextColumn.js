@@ -5,15 +5,22 @@ import UpNextVideos from './Components/UpNextVideos/UpNextVideos.js';
 
 import './UpNextColumn.css';
 
-class UpNextColumn extends Component {
+class UpNextColumn extends Component {  
   render() {
+    const { thumbId } = this.props
+    let nextId = parseInt(thumbId, 10) + 1
+    if(nextId === 20) {
+      nextId = "0"
+    }
+    const next = nextId.toString()
+
     return (
       <div className="up-next-column">
         <UpNextHeader />
         <div className="first-next-wrapper">
-          <NextVideoContainer />
+          <NextVideoContainer thumbId={nextId}/>
         </div>
-        <UpNextVideos />
+        <UpNextVideos thumbId={thumbId} nextId={next}/>
       </div>
     );
   }

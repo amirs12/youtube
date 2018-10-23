@@ -9,13 +9,13 @@ import './CommenterDetails.css';
 
 class CommenterDetails extends Component {
   render() {
-    const { body, commenterName , name} = this.props
+    const { body, commenterName , commentDate } = this.props
 
     return (
       <div className="commenter-details">
         <div className="commenter-header">
           <CommenterName commenterName={commenterName}/>
-          <CommentDate name={name}/>
+          <CommentDate commentDate={commentDate}/>
         </div>
           <CommentText body={body}/>
         <div className="comment-actions">

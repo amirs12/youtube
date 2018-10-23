@@ -27,4 +27,10 @@
 
 .group-videos {
   display: flex;
+  justify-content: space-between;
+}
+
+.category-video {
+  text-decoration: none;
+  color: black;  
 }
