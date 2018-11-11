@@ -19,6 +19,7 @@ class Comments extends Component {
     const usersItems = this.props.users.map(userItem => (
         <div key={this.props.comments[userItem.id].id} className="comments">
           <Comment body={this.props.comments[userItem.id].body} 
+                   commentId={userItem.id}
                    commenterName={userItem.name} 
                    commentDate={userItem.id}
                    commenterAvatar={this.props.dbVideos[0].avatars[userItem.id]}

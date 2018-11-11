@@ -13,8 +13,11 @@ import {
 const initialState = {
   videos: [],
   videosLoading: "true",
+  commentId: {}, 
   like: 500,
+  likeFlag: false,
   dislike: 10,
+  dislikeFlag: false,
   comments: [],
   users: [],
   dbVideos: [],
@@ -85,9 +88,9 @@ function commentsReducer(state = initialState, action) {
 function addLike(state = initialState, action) {
   switch (action.type) {
     case ADD_LIKE:
-      return {...state, like: state.like + 1}
+      return {...state, commentId: action.commentId, like: state.like + 1, likeFlag: "true"}
     case ADD_DISLIKE:
-      return {...state, dislike: state.dislike + 1}
+      return {...state, commentId: action.commentId, dislike: state.dislike + 1, dislikeFlag: "true"}
     default:
       return state
   }  

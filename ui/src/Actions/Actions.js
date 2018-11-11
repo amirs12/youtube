@@ -10,15 +10,17 @@ export const VIDEO_INFO_RESPONSE = 'VIDEO_INFO_RESPONSE'
 export const REQUEST_COMMENTS = 'REQUEST_COMMENTS'
 export const REQUEST_USERS = 'REQUEST_USERS'
 
-export const addDisLike = () => dispatch => {
+export const addDisLike = (commentId) => dispatch => {
   dispatch({
-    type: ADD_DISLIKE
+    type: ADD_DISLIKE,
+    commentId
   })
 }
 
-export const addALike = () => dispatch => {
+export const addALike = (commentId) => dispatch => {
   dispatch({
-    type: ADD_LIKE
+    type: ADD_LIKE,
+    commentId
   })
 }
 

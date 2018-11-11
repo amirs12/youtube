@@ -6,12 +6,12 @@ import './Comment.css'
 
 class Comment extends Component {
   render() {
-    const { body, commenterName, commentDate, commenterAvatar } = this.props
+    const { body, commentId, commenterName, commentDate, commenterAvatar } = this.props
 
     return (
       <div className="comment">
         <CommenterAvatar commenterAvatar={commenterAvatar}/>
-        <CommenterDetails body={body} commenterName={commenterName} commentDate={commentDate}/>
+        <CommenterDetails body={body} commentId={commentId} commenterName={commenterName} commentDate={commentDate}/>
       </div>
     )
   } 

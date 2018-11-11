@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import UpNextHeader from './Components/UpNextHeader/UpNextHeader.js';
 import NextVideoContainer from './Components/NextVideoContainer/NextVideoContainer.js';
 import UpNextVideos from './Components/UpNextVideos/UpNextVideos.js';
@@ -18,7 +19,9 @@ class UpNextColumn extends Component {
       <div className="up-next-column">
         <UpNextHeader />
         <div className="first-next-wrapper">
-          <NextVideoContainer thumbId={nextId}/>
+          <Link to={`/video/${nextId}`} className="first-next">
+            <NextVideoContainer thumbId={nextId}/>
+          </Link>
         </div>
         <UpNextVideos thumbId={thumbId} nextId={next}/>
       </div>

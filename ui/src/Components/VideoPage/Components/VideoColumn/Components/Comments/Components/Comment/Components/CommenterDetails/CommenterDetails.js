@@ -9,7 +9,7 @@ import './CommenterDetails.css';
 
 class CommenterDetails extends Component {
   render() {
-    const { body, commenterName , commentDate } = this.props
+    const { body, commentId, commenterName , commentDate } = this.props
 
     return (
       <div className="commenter-details">
@@ -19,7 +19,7 @@ class CommenterDetails extends Component {
         </div>
           <CommentText body={body}/>
         <div className="comment-actions">
-          <CommentLikes />
+          <CommentLikes commentId={commentId}/>
         </div>
         <ViewReplies />
       </div>
