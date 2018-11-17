@@ -1,21 +1,36 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
 import LikeCounter from './Components/LikeCounter/LikeCounter.js';
 import CommentReply from './Components/CommentReply/CommentReply.js';
-import { addDisLike, addALike } from '../../../../../../../../../../../../Actions/Actions.js'
 
 import './CommentLikes.css';
 
 class CommentLikes extends Component {
-  render() {
+  constructor(props) {
+    super(props)
     const { commentId } = this.props
-    if(this.props.dislikeFlag || this.props.likeFlag) {
+    this.state = {likes: commentId * 179, dislikes: commentId * 13, clickFlag: false}
+  }
+
+  incrementLikes = () => {
+		this.setState(
+            { likes: this.state.likes + 1, clickFlag: true }
+        );
+	};
+
+  incrementDislikes = () => {
+		this.setState(
+            { dislikes: this.state.dislikes + 1, clickFlag: true }
+        );
+  };
+  
+  render() {
+    if(this.state.clickFlag) {
       return (
         <div className="comment-likes">
           <i className="fas fa-thumbs-up"></i>
-          <LikeCounter value={this.props.like}/>
+          <LikeCounter value={this.state.likes}/>
           <i className="fas fa-thumbs-down"></i>
-          <LikeCounter value={this.props.dislike}/>
+          <LikeCounter value={this.state.dislikes}/>
           <CommentReply />
         </div>
       )
@@ -23,21 +38,14 @@ class CommentLikes extends Component {
 
     return (
       <div className="comment-likes">
-        <i onClick={this.props.addALike} className="fas fa-thumbs-up"></i>
-        <LikeCounter value={this.props.like}/>
-        <i onClick={this.props.addDisLike} className="fas fa-thumbs-down"></i>
-        <LikeCounter value={this.props.dislike}/>
+        <i onClick={this.incrementLikes} className="fas fa-thumbs-up"></i>
+        <LikeCounter value={this.state.likes}/>
+        <i onClick={this.incrementDislikes} className="fas fa-thumbs-down"></i>
+        <LikeCounter value={this.state.dislikes}/>
         <CommentReply />
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  dislike: state.addLike.dislike,
-  like: state.addLike.like,
-  dislikeFlag: state.addLike.dislikeFlag,
-  likeFlag: state.addLike.likeFlag
-})
-
-export default connect(mapStateToProps, { addDisLike, addALike })(CommentLikes);
+export default CommentLikes

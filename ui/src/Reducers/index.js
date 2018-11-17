@@ -1,7 +1,5 @@
 import { combineReducers } from 'redux'
 import {
-  ADD_LIKE,
-  ADD_DISLIKE,
   FETCH_COMMENTS,
   FETCH_USERS,
   GET_VIDEOS_RESPONSE,
@@ -14,10 +12,6 @@ const initialState = {
   videos: [],
   videosLoading: "true",
   commentId: {}, 
-  like: 500,
-  likeFlag: false,
-  dislike: 10,
-  dislikeFlag: false,
   comments: [],
   users: [],
   dbVideos: [],
@@ -85,20 +79,9 @@ function commentsReducer(state = initialState, action) {
   }
 }
 
-function addLike(state = initialState, action) {
-  switch (action.type) {
-    case ADD_LIKE:
-      return {...state, commentId: action.commentId, like: state.like + 1, likeFlag: "true"}
-    case ADD_DISLIKE:
-      return {...state, commentId: action.commentId, dislike: state.dislike + 1, dislikeFlag: "true"}
-    default:
-      return state
-  }  
-}
 
 const rootReducer = combineReducers({
   reduceComments, 
-  addLike,
   reduceUsers,
   reducedb,
   loadingReducer,

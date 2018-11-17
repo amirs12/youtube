@@ -1,28 +1,9 @@
-export const ADD_LIKE = 'ADD_LIKE'
-export const ADD_DISLIKE = 'ADD_DISLIKE'
-export const ADD_COMMENT = 'ADD_COMMENT'
 export const FETCH_COMMENTS = 'FETCH_COMMENTS'
 export const FETCH_USERS = 'FETCH_USERS'
 export const GET_VIDEOS_REQUEST = 'GET_VIDEOS_REQUEST'
 export const GET_VIDEOS_RESPONSE = 'GET_VIDEOS_RESPONSE'
-export const VIDEO_INFO_REQUEST = 'VIDEO_INFO_REQUEST'
-export const VIDEO_INFO_RESPONSE = 'VIDEO_INFO_RESPONSE'
 export const REQUEST_COMMENTS = 'REQUEST_COMMENTS'
 export const REQUEST_USERS = 'REQUEST_USERS'
-
-export const addDisLike = (commentId) => dispatch => {
-  dispatch({
-    type: ADD_DISLIKE,
-    commentId
-  })
-}
-
-export const addALike = (commentId) => dispatch => {
-  dispatch({
-    type: ADD_LIKE,
-    commentId
-  })
-}
 
 export const fetchComments = () => dispatch => {
   dispatch({type: REQUEST_COMMENTS})
