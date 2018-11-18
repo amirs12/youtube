@@ -18,7 +18,7 @@ class VideoColumn extends Component {
 
     return (
       <div className="video-column">
-        <div className="video-container">
+        <section className="video-container">
           <VideoPlayer dbVideo={dbVideo}/>
           <VideoTitle dbVideo={dbVideo}/>
           <div className="video-social">
@@ -26,23 +26,23 @@ class VideoColumn extends Component {
             <div className="social-icons">
             </div>
           </div>
-        </div>
-        <div className="video-author">
+        </section>
+        <section className="video-author">
           <div className="author-box">
             <AuthorAvatar dbVideo={dbVideo}/>
             <AuthorDetails dbVideo={dbVideo}/>
           </div>
           <AuthorSubscribe />
-        </div>
+        </section>
         <RelatedLinks />
-        <div className="comments-container">
+        <section className="comments-container">
           <div className="comments-header">
             <CommentsCounter />
             <div className="sort-by">SORT BY</div>
           </div>
           <UserAddComment />
           <Comments dbVideo={dbVideo}/>
-        </div>
+        </section>
       </div>
     );
   }

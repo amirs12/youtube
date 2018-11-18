@@ -1,3 +1,13 @@
+@media(max-width: 999px) {
+  div .video-column {
+    width: 94%;
+  }
+
+  .comments-container {
+    display: none;
+  }
+}
+
 .video-column {
   display: flex;
   flex-direction: column;

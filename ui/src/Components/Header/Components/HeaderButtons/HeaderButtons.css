@@ -1,5 +1,11 @@
+@media(max-width: 1200px) {
+  .header-buttons {
+    padding-left: 20px;
+  }
+}
+
 .header-buttons {
-  width: 100%;
+  flex-basis: 100%;
   max-width: 255px;
   min-width: 40px;
   display: flex;

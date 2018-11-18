@@ -1,3 +1,17 @@
+@media(max-width: 1200px){
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar-wrapper {
+    display: none;
+  }
+
+  div .groups-container{
+    left: 0px;
+  }
+}
+
 .content {
     display: flex;
     position: relative;
@@ -11,6 +25,7 @@
   max-width: 1126px;
   left: 240px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
